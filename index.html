@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang='zh-Hant'><head>
+<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Tiffany & Ko | Wedding</title>
+<link rel='stylesheet' href='style.css'>
+</head><body>
+<nav><a href='#story'>愛情故事</a><a href='#gallery'>婚紗相簿</a><a href='#info'>婚禮資訊</a></nav>
+
+<section class='hero'>
+<div class='overlay'>
+<h1>Tiffany & Ko</h1>
+<p class='date'>2026.09.12</p>
+<p>台中林酒店｜7樓台灣廳</p>
+<div id='countdown'></div>
+</div>
+</section>
+
+<section id='story' class='story'>
+<h2>Our Story</h2>
+<div class='timeline'>
+<div><span>2019.10</span><p>認識</p></div>
+<div><span>2020.04</span><p>交往</p></div>
+<div><span>2025.06</span><p>求婚</p></div>
+<div><span>2026.09.12</span><p>結婚</p></div>
+</div>
+</section>
+
+<section class='parallax'></section>
+
+<section id='gallery'>
+<h2>Wedding Gallery</h2>
+<div class='grid'></div>
+</section>
+
+<section id='info'>
+<h2>Wedding Information</h2>
+<p>婚禮日期｜2026/09/12</p>
+<p>婚宴地點｜台中林酒店 7樓台灣廳</p>
+</section>
+
+<script>
+const g=document.querySelector('.grid');
+for(let i=2;i<=19;i++){g.innerHTML+=`<img src="assets/img${i}.jpg">`;}
+
+const target=new Date('2026-09-12T12:00:00');
+setInterval(()=>{
+let d=target-new Date();
+let day=Math.floor(d/86400000);
+document.getElementById('countdown').innerHTML='距離婚禮 '+day+' 天';
+},1000);
+</script>
+</body></html>
